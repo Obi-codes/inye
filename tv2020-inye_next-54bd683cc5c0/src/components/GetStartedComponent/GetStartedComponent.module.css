@@ -1,0 +1,63 @@
+.main {
+    border-radius: 1.3vw;
+    background: var(--Inner-Black-Shade, #1F2027);
+    width: 50vw;
+    margin-top: 2vw;
+    /* height: 20vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    /* flex-shrink: 0; */
+}
+
+.heading {
+    color: var(--Main-Color-Text, #FFF);
+
+    font-family: "SF Pro Display";
+    font-size: 1.8vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 1;
+}
+
+.subHeading {
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.22px;
+}
+
+.smallBoxDiv {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    width: 23vw;
+    /* background-color: yellow; */
+    justify-content: space-around;
+}
+
+.buttonDiv {
+    background-color: #ffce21;
+    padding: 0.7vw;
+    width: 21vw;
+    border-radius: 2vw;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.button {
+    color: var(--Inner-Black-Shade, #1F2027);
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
