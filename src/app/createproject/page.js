@@ -1,17 +1,26 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, useLayoutEffect, useState } from "react";
 import CreateProject from "@/customComponents/CreateProjectScreen";
 import CreateProjectDetails from "@/customComponents/CreateProjectScreen/createprojectdetails";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 const CreateProjectScreen = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const router = useRouter();
+
+  const authUser =
+    typeof localStorage !== "undefined" &&
+    JSON.parse(localStorage?.getItem("inyeUserData"));
 
   const [formData, setFormData] = useState({
     name: "",
     orgTitle: "",
     picture: "",
     desc: "",
+    deadline: 0,
+    outline: "",
+    goals: 0,
   });
 
   const renderStepsComponents = (step) => {
@@ -35,13 +44,22 @@ const CreateProjectScreen = () => {
           />
         );
       default:
-        return <div>Nothign to render</div>;
+        return <div>Nothing to render</div>;
     }
   };
 
+  useLayoutEffect(() => {
+    if (!authUser || authUser?.type !== "admin") {
+      router.push("/");
+      return;
+    }
+  }, [authUser, router]);
+
   return (
     <Fragment>
-      <Box>{renderStepsComponents(activeStep)}</Box>
+      {authUser && authUser?.type == "admin" ? (
+        <Box>{renderStepsComponents(activeStep)}</Box>
+      ) : null}
     </Fragment>
   );
 };

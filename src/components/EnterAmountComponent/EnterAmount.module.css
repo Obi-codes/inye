@@ -1,0 +1,67 @@
+.mainDiv {
+    width: 100%;
+    /* background-color: #141316; */
+    background-color: "#1F2027";
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5vw;
+}
+.select {
+    color: var(--Main-Color, #FFCE21);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "SF Pro Display";
+    font-size: 0.6vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin-left: auto;
+    margin-right: 4.2vw;
+    margin-top: 2vw;
+}
+
+.enterAmountDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: #1b1c20;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255,1);
+    padding: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 0.2vw;
+    margin-top: 0.5vw;
+}
+
+.enterAmountDiv>input {
+    background-color: transparent;
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.buttonDiv {
+    background-color: #ffce21;
+    padding: 0.4vw;
+    width: 80%;
+    border-radius: 1.2vw;
+    text-align: center;
+    margin-top: 2.5vw;
+}
+
+.button {
+    color: var(--Inner-Black-Shade, #1F2027);
+    font-family: "SF Pro Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}

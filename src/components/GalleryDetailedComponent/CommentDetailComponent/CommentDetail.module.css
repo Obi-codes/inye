@@ -1,0 +1,48 @@
+.commentMainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5vw; 
+}
+
+.nameDiv {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.name {
+    color: var(--Main-Color, #FFCE21);
+    font-family: "SF Pro Display";
+    font-size: 0.9vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* letter-spacing: -0.356px; */
+}
+
+.commentTime {
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+    font-family: "SF Pro Display";
+    font-size: 0.7vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.267px;
+    margin-left: 0.5vw;
+}
+
+
+.descriptionText {
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2vw;
+    font-size: 1vw;
+    /* 19.88px */
+    letter-spacing: 0.196px;
+    padding-top: 0.7vw;
+    /* padding-bottom: 0.3vw; */
+
+}

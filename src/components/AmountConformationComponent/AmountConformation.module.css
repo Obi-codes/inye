@@ -1,0 +1,25 @@
+.mainDiv {
+  width: 100%;
+  /* background-color: #141316; */
+  background-color: "#1F2027";
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 35vh;
+  border-radius: 0.5vw;
+}
+.amount {
+  color: var(--Main-Color-Text, #ffce21);
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.05px;
+  margin-top: 1vw;
+  margin-left: 0.2vw;
+  text-decoration: underline;
+}

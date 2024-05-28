@@ -72,6 +72,10 @@ const CreateProjectDetails = ({
     setSelectedOptions((prev) => ({ ...prev, [detailId]: optionId }));
   };
 
+  const handleSave = () => {
+    router.push("/");
+  };
+
   return (
     <div className={style.main}>
       <div className={style.subMain}>
@@ -279,7 +283,7 @@ const CreateProjectDetails = ({
               <Box sx={{ width: 1, display: "flex" }}>
                 <Button
                   variant="contained"
-                  //   onClick={handleSave}
+                  onClick={handleSave}
                   sx={{
                     backgroundColor: colorSchema.main,
                     color: "black",

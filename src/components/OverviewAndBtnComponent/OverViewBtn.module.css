@@ -1,0 +1,48 @@
+.topDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    background-color: #1b1c20;
+    padding-bottom: 1vw;
+}
+
+.text {
+    color: var(--Main-Color-Text, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "SF Pro Display";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -1.2px;
+}
+.buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 19vw;
+    gap: 1,
+}
+.button{
+    /* border: 1px solid #ffce21; */
+    border-radius: 2vw;
+    background-color: transparent;
+    /* color: #ffce21; */
+    padding: 0.5vw;
+    font-size: 1vw;
+    font-family: "SF Pro Display";
+    width: 9vw;
+    min-width: 9vw;
+
+}
+
+.selectedbtn {
+    border: 1px solid #ffce21;
+    color: #ffce21;
+}
+
+.notSelected {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: #918D92;
+}

@@ -1,0 +1,72 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2027;
+    padding: 2vw;
+    width: 49%;
+    padding-top: 0.2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 2vw;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+    height: 40vh;
+    padding-bottom: 18.5vw;
+}
+
+
+.hr {
+    line-height: 20vw;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.subDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw;
+    padding-bottom: 0vw;
+    margin-bottom: -0.3vw;
+
+
+}
+
+.subDiv1 {
+    color: var(--Main-Color-Text, #FFF);
+    text-align: right;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 16.971px */
+    letter-spacing: -0.109px;
+}
+.subDiv2{
+    color: var(--Main-Color, #FFCE21);
+text-align: right;
+font-family: "SF Pro Display";
+font-size: 1vw;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 16.971px */
+letter-spacing: -0.109px;
+}
+.buttonDiv {
+    background-color: #ffce21;
+    padding: 0.3vw;
+    width: 90%;
+    border-radius: 1vw;
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-left: 4.8%;
+}
+
+.button {
+    color: var(--Inner-Black-Shade, #1F2027);
+    font-family: "SF Pro Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}

@@ -1,0 +1,158 @@
+.mainDiv {
+
+    padding: 2vw;
+    width: 70%;
+    background-color: #1b1c20;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 0.5vw;
+    padding-top: 0;
+    margin: 2vw;
+
+
+}
+.detailTop {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 1.2vw;
+
+    justify-content: space-between;
+}
+
+.detailSubDiv {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.subDiv {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: 1vw;
+    padding-bottom: 0vw;
+    margin-bottom: -0.3vw;
+    margin-top: 4vw;
+
+}
+
+.subDiv1 {
+    color: var(--Main-Color-Text, #FFF);
+    text-align: right;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 16.971px */
+    letter-spacing: -0.109px;
+    text-align: left;
+
+}
+
+.subDiv2 {
+    color: var(--Main-Color, #FFCE21);
+    text-align: right;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    /* 16.971px */
+    letter-spacing: -0.109px;
+    text-align: left;
+    margin-top: 0.5vw;
+
+}
+
+.descriptionDiv {
+    padding: 2.2vw;
+    /* background-color: yellow; */
+    margin-top: -2vw;
+}
+
+.descriptionTag {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    width: 19vw;
+    /* 19.88px */
+    letter-spacing: -0.196px;
+    padding-top: 0.6vw;
+    padding-bottom: 0.7vw;
+    padding-left: 0.2vw;
+    /* margin-top: 3vw; */
+
+}
+
+.descriptionText {
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1vw;
+    font-size: 0.8vw;
+    /* 19.88px */
+    letter-spacing: 0.196px;
+    padding-top: 0.2vw;
+    /* padding-bottom: 0.3vw; */
+    padding-left: 0.2vw;
+
+}
+
+.buttonDiv {
+    border: 1px solid #ffce21;
+    border-radius: 2vw;
+    background-color: transparent;
+    color: #ffce21;
+    /* background-color: #ffce21; */
+    width: 18%;
+    /* border-radius: 1vw; */
+    margin-top: 2vw;
+    padding: 0.4vw;
+
+    /* margin-left: 4.8%; */
+}
+.buttonDiv:hover{
+    background-color: #ffce21;
+    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+
+}
+.button {
+    /* color: #ffce21; */
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    /* font-weight: 400; */
+    line-height: normal;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+
+}
+.cancelSubscriptionDiv {
+    background-color: #ec583c;
+    padding: 0.4vw;
+    width: 100%;
+    border-radius: 1.2vw;
+    text-align: center;
+    margin-top: 2.2vw;
+    /* margin-bottom: 12vw; */
+}
+
+.cancelButton {
+    color: var(--Inner-Black-Shade, #1F2027);
+    font-family: "SF Pro Display";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}

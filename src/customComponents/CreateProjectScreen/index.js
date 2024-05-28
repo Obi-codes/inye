@@ -102,8 +102,8 @@ const CreateProject = ({
                 variant="outlined"
                 fullWidth
                 placeholder={"Project Name"}
-                // name="profilePic"
-                // value={formData.profilePic}
+                name="name"
+                // value={formData.name}
                 // onChange={handleInputChange}
                 sx={{
                   width: 1,
@@ -125,8 +125,8 @@ const CreateProject = ({
                 variant="outlined"
                 fullWidth
                 placeholder={"organization Title"}
-                // name="profilePic"
-                // value={formData.profilePic}
+                name="orgTitle"
+                // value={formData.orgTitle}
                 // onChange={handleInputChange}
                 sx={{
                   width: 1,
@@ -148,7 +148,8 @@ const CreateProject = ({
                 variant="outlined"
                 fullWidth
                 placeholder={"Display Picture"}
-                // name="profilePic"
+                name="picture"
+                // value={formData.picture}
                 sx={{
                   width: 1,
                   color: "white",
@@ -181,7 +182,8 @@ const CreateProject = ({
                 variant="outlined"
                 fullWidth
                 placeholder={"Project Description"}
-                // name="address"
+                name="desc"
+                // value={formData.desc}
                 multiline={true}
                 rows={4}
                 sx={{

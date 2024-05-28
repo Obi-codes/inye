@@ -1,0 +1,29 @@
+
+
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 32%;
+    /* background-color: white; */
+}
+
+.imageWrapper>p {
+    color: var(--Main-Color, #FFCE21);
+    font-family: "SF Pro Display";
+    font-size: 0.9vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.51px;
+    background-color: #262527;
+    padding: 0.7vw;
+    text-align: center;
+    margin-top: -1vw;
+    border: 0.2px solid rgba(255, 206, 33, 0.2);
+    border-radius: 0 0 1vw 1vw;
+    /* border-top-right-radius: 0;
+    border-top-left-radius: 0; */
+    border-top: 0;
+}

@@ -1,0 +1,28 @@
+.mainDiv {
+
+    padding: 2vw;
+    width: 97%;
+    background-color: #1b1c20;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+    border-radius: 0.5vw;
+    /* padding-top: 0; */
+}
+
+.backButton {
+    color: var(--Main-Color-Text, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 0.5vw;
+    /* background-color: blue; */
+    background-color: #1b1c20;
+    box-shadow: 0px 0px 8px rgba(255, 255, 35, 0.2);
+    padding: 0.3vw;
+    width: 4vw;
+    margin-right: -55%;
+    margin-top: -0vw;
+
+}

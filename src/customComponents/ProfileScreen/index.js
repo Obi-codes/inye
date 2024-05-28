@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Button,
@@ -6,11 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import CustomCard from "./customCard";
-// import {
-//   DateTimePicker,
-//   LocalizationProvider,
-//   AdapterDayjs,
-// } from "@mui/x-date-pickers";
 import Image from "next/image";
 import CalenderImage from "../../../public/assets/calendar.png";
 import ProfileImage from "../../../public/assets/Profil.png";
@@ -18,6 +14,8 @@ import DownloadImage from "../../../public/assets/download.png";
 import { colorSchema } from "@/utils/color";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import ImageUpload from "../ImageUploader";
+import CustomImage from "../ImageComp";
 
 const Profile = ({ userType, setIsClick, selectUserType, type }) => {
   const handleBack = () => {
@@ -26,9 +24,10 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
   };
 
   const router = useRouter();
+  const [uploadImage, setUploadedImage] = useState(null);
 
   const [formData, setFormData] = useState({
-    profilePic: "",
+    profilePic: uploadImage ? uploadImage : "",
     fullName: "",
     dateOfBirth: "",
     email: "",
@@ -50,7 +49,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
     localStorage.setItem("inyeUserData", JSON.stringify(formData));
     localStorage.setItem("token", dummyToken);
 
-    router.push(userType === "admin" ? "/createproject" : "/");
+    router.push(userType == "admin" ? "/createproject" : "/");
   };
 
   return (
@@ -94,7 +93,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
             fontWeight: 800,
             letterSpacing: "0.01vw",
             fontFamily: '"SF Pro Display", sans-serif',
-mt: "-3.5vw"
+            mt: "-3.5vw",
           }}
         >
           Create {type} Profile
@@ -107,7 +106,7 @@ mt: "-3.5vw"
             letterSpacing: "-0.22px",
             opacity: 0.7,
             color: "white",
-            mb: "3vw"
+            mb: "3vw",
           }}
         >
           Please enter the details to register an account
@@ -124,9 +123,9 @@ mt: "-3.5vw"
           }}
         >
           <Box sx={{ width: 1, display: "flex", gap: 2.5 }}>
-            <Image
+            <CustomImage
               src={ProfileImage}
-              alt="calender"
+              alt={"profile"}
               width={60}
               height={10}
               unoptimized={false}
@@ -134,40 +133,11 @@ mt: "-3.5vw"
                 borderRadius: "50%",
               }}
             />
-            <TextField
-              variant="outlined"
-              fullWidth
-              placeholder={"Upload Profile Pic - HT1o1o.png"}
-              name="profilePic"
-              value={formData.profilePic}
-              onChange={handleInputChange}
-              sx={{
-                width: 1,
-                borderRadius: "12px",
-                color: "white",
-                border: "1px solid #FFF",
-                "& .MuiInputBase-input::placeholder": {
-                  color: "white",
-                  opacity: 0.7,
-                },
-                "& .MuiOutlinedInput-root": {
-                  color: "white",
-                  opacity: 0.7,
-                },
-              }}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <Image
-                      src={DownloadImage}
-                      alt="download"
-                      width={20}
-                      height={10}
-                      unoptimized={false}
-                    />
-                  </InputAdornment>
-                ),
-              }}
+            <ImageUpload
+              profile={formData.profilePic}
+              handleInputChange={handleInputChange}
+              setUploadedImage={setUploadedImage}
+              uploadImage={uploadImage}
             />
           </Box>
           <TextField
@@ -283,13 +253,16 @@ mt: "-3.5vw"
                     opacity: 0.7,
                   }}
                 >
-                  +12{" "}
-                  <span
-                    style={{
-                      height: "6px",
-                      backgroundColor: "rgba(255, 255, 255, 0.10)",
-                    }}
-                  />
+                  <Box sx={{ display: "flex", gap: 2 }}>
+                    <span>+12</span>
+                    <span
+                      style={{
+                        width: "1px",
+                        height: "6px",
+                        backgroundColor: "rgba(255, 255, 255, 0.10)",
+                      }}
+                    />
+                  </Box>
                 </InputAdornment>
               ),
             }}
