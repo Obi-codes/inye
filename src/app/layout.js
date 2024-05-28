@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 // export const metadata = {
 //   title: "INYE",
-//   description: "Invest, Nurture, Yeild Equity",
+//   description: "Invest, Nurture, Yield Equity",
 // };
 
 export default function RootLayout({ children }) {
