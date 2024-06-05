@@ -8,8 +8,8 @@
     border-radius: 0.5vw;
     margin-bottom: 2vw;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
-    height: 40vh;
-    padding-bottom: 18.5vw;
+    /* height: 40vh; */
+    /* padding-bottom: 18.5vw; */
 }
 
 
@@ -26,6 +26,7 @@
     padding: 1vw;
     padding-bottom: 0vw;
     margin-bottom: -0.3vw;
+    /* background-color: red; */
 
 
 }
@@ -41,16 +42,19 @@
     /* 16.971px */
     letter-spacing: -0.109px;
 }
-.subDiv2{
+
+.subDiv2 {
     color: var(--Main-Color, #FFCE21);
-text-align: right;
-font-family: "SF Pro Display";
-font-size: 1vw;
-font-style: normal;
-font-weight: 600;
-line-height: 100%; /* 16.971px */
-letter-spacing: -0.109px;
+    text-align: right;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    /* 16.971px */
+    letter-spacing: -0.109px;
 }
+
 .buttonDiv {
     background-color: #ffce21;
     padding: 0.3vw;
@@ -59,6 +63,10 @@ letter-spacing: -0.109px;
     text-align: center;
     margin-top: 1.5vw;
     margin-left: 4.8%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
@@ -69,4 +77,48 @@ letter-spacing: -0.109px;
     font-weight: 700;
     line-height: normal;
 
+}
+
+@media screen and (max-width: 768px) {
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        background-color: #1f2027;
+        /* background-color: green; */
+        padding: 2vw;
+        width: 100%;
+        
+     
+    }
+    .buttonDiv {
+        padding: 1vw;
+        border-radius: 2vw;
+        margin-top: 3vw;
+    }
+
+    .button {
+        font-size: 2vw;
+    }
+    .subDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2vw;
+        padding-bottom: 0vw;
+        margin-bottom: 0.3vw;
+        /* background-color: red; */
+    
+    
+    }
+    .subDiv1 {
+     
+        font-size: 2vw;
+        letter-spacing: 0.509px;
+    }
+    
+    .subDiv2 {
+      
+        font-size: 1.5vw;
+        letter-spacing: 0.209px;
+    }
 }

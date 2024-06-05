@@ -1,10 +1,10 @@
 import React from "react";
 
-const ButtonComponent = ({ buttonDivCss, buttonCss, setIsClick }) => {
+const ButtonComponent = ({ buttonDivCss, buttonCss, setIsClick ,buttonText}) => {
   return (
     <div className={buttonDivCss}>
       <button className={buttonCss} onClick={() => setIsClick(true)}>
-        Continue To Signup
+        {buttonText}
       </button>
     </div>
   );

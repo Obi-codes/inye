@@ -17,9 +17,8 @@
   }
 }
 
-/* styles/globals.css */
 body {
-  background-color: #000;
+  background-color: #141316;
   background-image: url('/iyne-bg.png');
   background-repeat: no-repeat;
   background-size:cover;
@@ -27,8 +26,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  /* width: 80%; */
-  /* margin-bottom: 10vw; */
 }
 
 .img{

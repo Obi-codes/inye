@@ -1,48 +1,77 @@
 .topDiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2vw;
-    background-color: #1b1c20;
-    padding-bottom: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  background-color: #1b1c20;
+  padding-bottom: 1vw;
 }
 
 .text {
-    color: var(--Main-Color-Text, #FFF);
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: "SF Pro Display";
-    font-size: 2vw;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: -1.2px;
+  color: var(--Main-Color-Text, #fff);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.2px;
 }
-.buttonDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 19vw;
-    gap: 1,
-}
-.button{
-    /* border: 1px solid #ffce21; */
-    border-radius: 2vw;
-    background-color: transparent;
-    /* color: #ffce21; */
-    padding: 0.5vw;
-    font-size: 1vw;
-    font-family: "SF Pro Display";
-    width: 9vw;
-    min-width: 9vw;
 
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 19vw;
+  gap: 1;
+}
+
+.button {
+  border-radius: 2vw;
+  background-color: transparent;
+  padding: 0.5vw;
+  font-size: 1vw;
+  font-family: "SF Pro Display";
+  width: 9vw;
+  min-width: 9vw;
+}
+
+.button:hover {
+  color: var(--Inner-Black-Shade, #fff);
+  text-align: center;
+  background-color: #ffce21;
 }
 
 .selectedbtn {
-    border: 1px solid #ffce21;
-    color: #ffce21;
+  border: 1px solid #ffce21;
+  color: #ffce21;
 }
 
 .notSelected {
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    color: #918D92;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #918d92;
+}
+
+.button:hover {
+  color: var(--Inner-Black-Shade, #fff);
+  text-align: center;
+  background-color: #ffce21;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .text {
+    font-size: 4vw;
+    letter-spacing: 0.2px;
+
+  }
+
+  .buttonDiv {
+    width: 24vw;
+  }
+
+  .button {
+    font-size: 1.7vw;
+    width: 11vw;
+  }
 }

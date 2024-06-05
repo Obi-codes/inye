@@ -19,7 +19,7 @@ const GalleryCard = ({ item }) => {
           <span className={style.subDiv2}>{item.amount}</span>
         </div>
       </div>
-      <div className={style.buttonDiv}>
+      <div className={style.buttonDiv}  onClick={() => router.push(`/projectdetail/${item.slug}`)}>
         <button
           className={style.button}
           onClick={() => router.push(`/projectdetail/${item.slug}`)}

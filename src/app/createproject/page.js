@@ -1,10 +1,9 @@
 "use client";
-import { Fragment, useLayoutEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import CreateProject from "@/customComponents/CreateProjectScreen";
 import CreateProjectDetails from "@/customComponents/CreateProjectScreen/createprojectdetails";
 import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
-
 const CreateProjectScreen = () => {
   const [activeStep, setActiveStep] = useState(0);
   const router = useRouter();
@@ -48,7 +47,7 @@ const CreateProjectScreen = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!authUser || authUser?.type !== "admin") {
       router.push("/");
       return;

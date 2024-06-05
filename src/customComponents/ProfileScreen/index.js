@@ -1,4 +1,3 @@
-"use client";
 import {
   Box,
   Button,
@@ -9,13 +8,12 @@ import {
 import CustomCard from "./customCard";
 import Image from "next/image";
 import CalenderImage from "../../../public/assets/calendar.png";
-import ProfileImage from "../../../public/assets/Profil.png";
-import DownloadImage from "../../../public/assets/download.png";
-import { colorSchema } from "@/utils/color";
+import ProfileImage from "../../../public/assets/Profile.png";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ImageUpload from "../ImageUploader";
 import CustomImage from "../ImageComp";
+import { colorSchema } from "@/utils/color";
 
 const Profile = ({ userType, setIsClick, selectUserType, type }) => {
   const handleBack = () => {
@@ -24,10 +22,13 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
   };
 
   const router = useRouter();
-  const [uploadImage, setUploadedImage] = useState(null);
+  const [uploadImage, setUploadedImage] = useState({
+    url: null,
+    file: null,
+  });
 
   const [formData, setFormData] = useState({
-    profilePic: uploadImage ? uploadImage : "",
+    profilePic: uploadImage?.file ? uploadImage?.file : "",
     fullName: "",
     dateOfBirth: "",
     email: "",
@@ -48,7 +49,6 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
     const dummyToken = "inye_token12345678";
     localStorage.setItem("inyeUserData", JSON.stringify(formData));
     localStorage.setItem("token", dummyToken);
-
     router.push(userType == "admin" ? "/createproject" : "/");
   };
 
@@ -57,7 +57,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
       sxStyle={{
         width: "100%",
         height: "100%",
-        minWidth: "600px",
+        minWidth: { xs: 360, sm: 450, md: 600 },
         fontFamily: "SF Pro Display",
         p: "2vw",
       }}
@@ -66,8 +66,8 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
           onClick={handleBack}
           sx={{
             fontFamily: '"SF Pro Display", sans-serif',
-            fontSize: "18px",
-            height: "32px",
+            fontSize: { xs: 8, sm: 10, md: 32 },
+            height: { xs: 18, sm: 20, md: 30 },
             fontWeight: 500,
             color: "white",
             borderRadius: "12px",
@@ -89,7 +89,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
         <Typography
           sx={{
             color: "white",
-            fontSize: "2vw",
+            fontSize: { xs: "4vw", sm: "3vw", md: "2vw" },
             fontWeight: 800,
             letterSpacing: "0.01vw",
             fontFamily: '"SF Pro Display", sans-serif',
@@ -101,7 +101,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
         <Typography
           sx={{
             fontFamily: '"SF Pro Display", sans-serif',
-            fontSize: "1.2vw",
+            fontSize: { xs: "2.5vw", sm: "2.2vw", sm: "1.2vw" },
             fontWeight: 400,
             letterSpacing: "-0.22px",
             opacity: 0.7,
@@ -115,22 +115,26 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "1vw",
+            gap: { xs: "4vw", sm: "3vw", md: "1vw" },
             mt: "1vw",
-            minWidth: 550,
+            minWidth: { xs: 320, sm: 360, md: 550 },
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Box sx={{ width: 1, display: "flex", gap: 2.5 }}>
+          <Box
+            sx={{ width: 1, display: "flex", gap: { xs: 2, sm: 2, md: 2.5 } }}
+          >
             <CustomImage
-              src={ProfileImage}
+              src={uploadImage?.url ? uploadImage?.url : ProfileImage}
               alt={"profile"}
               width={60}
               height={10}
-              unoptimized={false}
+              unoptimized={true}
               style={{
                 borderRadius: "50%",
+                height: { xs: 8, sm: 9, md: 10 },
+                width: { xs: 8, sm: 9, md: 10 },
               }}
             />
             <ImageUpload
@@ -158,8 +162,7 @@ const Profile = ({ userType, setIsClick, selectUserType, type }) => {
                 color: "white",
                 opacity: 0.7,
                 borderRadius: "12px",
-                border: "1px solid",
-                borderColor: "white",
+                border: "1px solid white",
               },
             }}
           />

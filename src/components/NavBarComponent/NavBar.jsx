@@ -1,67 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import {
-  InputAdornment,
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  InputBase,
-} from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
+import { AppBar, Box, Toolbar, IconButton, Typography, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import menuIcon from "/public/assets/menuIcon.png";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import NotesIcon from "@mui/icons-material/Notes";
-import ProfileImage from "../../../public/assets/Profil.png";
+import ProfileImage from "../../../public/assets/Profile.png";
 import { useRouter } from "next/navigation";
 import CustomImage from "@/customComponents/ImageComp";
 import { colorSchema } from "@/utils/color";
 import searchOptionImage from "../../../public/assets/searchbar-option.png";
 import Sidebar from "../SidebarDrawer";
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: "0.7vw",
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(40),
-    width: "40%",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    display: "flex",
-    flex: 1,
-    [theme.breakpoints.up("md")]: {
-      width: "45ch",
-    },
-  },
-}));
 
 export default function NavBar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -96,15 +46,21 @@ export default function NavBar() {
         backgroundColor: colorSchema.back,
       }}
     >
-      <Box sx={{ width: "90%" }}>
+      <Box sx={{
+        width: "90%", boxShadow: "none",
+        border: "none",
+        outline: "none",
+      }}>
         <AppBar
           position="static"
           sx={{
             boxShadow: "none",
+            border: "none",
+            outline: "none",
           }}
         >
           <Toolbar sx={{ backgroundColor: "#141316" }}>
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box sx={{ display: "flex", gap: 2, mr: 2, width: {md: 1, lg: 1, xl: 1, xxl: 1} }}>
               <CustomImage
                 src={menuIcon}
                 width={35}
@@ -118,48 +74,117 @@ export default function NavBar() {
                 variant="h6"
                 component="div"
                 sx={{
-                  display: {
-                    sm: "block",
-                    fontFamily: "Barlow Condensed",
-                    fontWeight: 700,
-                  },
+                  display: "block",
+                  fontFamily: "Barlow Condensed",
+                  fontWeight: 700,
                 }}
               >
                 INYE
               </Typography>
             </Box>
-            <Box sx={{ flexGrow: 1 }} />
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon fontSize="64" />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label ": "search" }}
-                endAdornment={
+            <Box
+              sx={{
+                flex: 1,
+                flexGrow: 1,
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "flex",
+                  lg: "flex",
+                  xl: "flex",
+                  xxl: "flex",
+                },
+              }}
+            />
+            <TextField
+              placeholder='Search'
+              type="text"
+              variant="outlined"
+              fullWidth
+              size="small"
+              sx={{
+                display: 'flex',
+                color: 'white',
+                opacity: 0.7,
+                fontFamily: "SF Pro Display",
+                fontSize: "12px",
+                fontWeight: 400,
+                letterSpacing: "-0.36px",
+                textColor: "white",
+                outline: 'none',
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                width: { xs: "45vw", sm: "65vw", md: "100%" },
+                justifyContent: "space-between",
+                backgroundColor: colorSchema.innerBackground,
+                mr: 2,
+                borderRadius: "0.5vw",
+                '&:hover': {
+                  border: "1px solid #FFCE21",
+                },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: 'rgba(255, 255, 255, 0.15)',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#FFCE21',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#FFCE21',
+                  },
+                },
+                '& .MuiInputBase-input': {
+                  color: 'white',
+                },
+                '& .MuiInputAdornment-root': {
+                  color: 'white',
+                },
+                '& .MuiInputLabel-root': {
+                  color: 'white',
+                  opacity: 0.7,
+                },
+                '& .MuiOutlinedInput-notchedOutline': {
+                  borderColor: 'rgba(255, 255, 255, 0.15)',
+                },
+              }}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start" sx={{
+                    color: "white"
+                  }}>
+                    <SearchIcon fontSize="64" />
+                  </InputAdornment>
+                ),
+                endAdornment: (
                   <InputAdornment position="end">
-                    <Box sx={{ display: "flex", gap: 2.5 }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        gap: 2,
+                        color: 'white',
+                      }}
+                    >
                       <span
                         style={{
                           width: "1.5px",
                           height: "18px",
                           backgroundColor: "white",
                           opacity: 0.24,
+                          color: 'white',
                         }}
                       />
                       <CustomImage
                         src={searchOptionImage}
                         alt={"option"}
-                        height={12}
-                        width={18}
-                        unoptimized={false}
+                        height={10}
+                        width={16}
+                        unoptimized={true}
                         key={"option"}
                       />
                     </Box>
                   </InputAdornment>
-                }
-              />
-            </Search>
+                ),
+              }}
+            />
             <Box
               sx={{
                 display: {

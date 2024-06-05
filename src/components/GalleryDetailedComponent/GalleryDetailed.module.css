@@ -73,12 +73,12 @@
 .descriptionTag {
     color: white;
     font-family: "SF Pro Display";
-    font-size: 1.2vw;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
     width: 19vw;
     /* 19.88px */
+    font-size: 1.2vw;
     letter-spacing: -0.196px;
     padding-top: 0.6vw;
     padding-bottom: 0.7vw;
@@ -96,7 +96,7 @@
     font-size: 1vw;
     /* 19.88px */
     letter-spacing: 0.196px;
-    padding-top: 0.2vw;
+    /* padding-top: 0.2vw; */
     /* padding-bottom: 0.3vw; */
     padding-left: 0.2vw;
 
@@ -109,6 +109,7 @@
     border-radius: 1vw;
     text-align: center;
     margin-top: 2vw;
+    cursor: pointer;
     /* margin-left: 4.8%; */
 }
 
@@ -200,4 +201,93 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.32px;
+}
+.commentImage{
+    width: 2vw;
+    height: 2vw;
+    padding: 0.2vw;
+}
+
+.checkBox {
+   
+    position: absolute;
+    top: -0.8vw;
+    left: 21.4vw;
+    width: 9%;
+    height: 9%;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .detailSubDiv {
+        margin-top: 3vw;
+    }
+
+    .subDiv1 {
+        font-size: 1.5vw;
+        letter-spacing: 0.109px;
+    }
+
+    .subDiv2 {
+        font-size: 1.5vw;
+        margin-top: 0.7vw;
+    }
+
+    .descriptionTag {
+        font-size: 2.2vw;
+        letter-spacing: -0.196px;
+    }
+
+    .descriptionText {
+        font-size: 1.5vw;
+        letter-spacing: 0.596px;
+        line-height: 1.9vw;
+
+    }
+
+    .buttonDiv {
+
+        width: 30%;
+        border-radius: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        font-size: 1.7vw;
+    }
+
+    .text {
+        font-size: 3vw;
+        letter-spacing: 0.2px;
+    }
+
+    .commentSubDiv {
+
+        width: 18vw;
+        margin-top: 1.5vw;
+    }
+
+    .view {
+
+        font-size: 1.5vw;
+    }
+    .writeCommentInputDiv>input {
+        font-size: 2vw;
+        letter-spacing: 0.32px;
+    }
+    .commentImage{
+        width: 7%;
+        height: 7%;
+        padding: 0.8vw;
+    }
+    .checkBox {
+        top: -3vw;
+        left: 68.4vw;
+        width: 9%;
+        height: 9%;
+
+    }
+
 }

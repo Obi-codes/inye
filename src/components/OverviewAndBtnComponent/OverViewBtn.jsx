@@ -1,11 +1,12 @@
 import React from "react";
 import style from "./OverViewBtn.module.css";
 
-const OverViewBtn = ({ btnArray, selectedButton, setSelectedButton }) => {
+const OverViewBtn = ({ btnArray, selectedButton, setSelectedButton,backButton,overViewCss }) => {
   return (
     <div>
       <div className={style.topDiv}>
-        <h2 className={style.text}>Overview</h2>
+        {backButton}
+        <h2 className={`${style.text} ${backButton ? overViewCss : ""}`}>Overview</h2>
         <div className={style.buttonDiv}>
           {btnArray?.map((item, i) => (
             <button
@@ -27,7 +28,7 @@ const OverViewBtn = ({ btnArray, selectedButton, setSelectedButton }) => {
           border: "0",
           height: "1px",
           backgroundColor: "rgba(255, 255, 255, 0.05)",
-          marginTop: 0,
+          marginTop: '1vw',
         }}
       />
     </div>

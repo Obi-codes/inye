@@ -1,0 +1,37 @@
+
+.imageTextDiv {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.imageTextDiv>p {
+    color: var(--Main-Color-Text, #FFF);
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 0.9vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1vw;
+}
+.imageClass{
+    width: 15vw;
+    height: 15vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .imageTextDiv>p {
+        letter-spacing: 0.8px;
+        font-size: 1.8vw;
+    }
+    .imageClass{
+        width: 20vw;
+        height: 20vw;
+        margin-bottom: 2vw;
+    }
+}

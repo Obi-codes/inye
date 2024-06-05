@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import style from "./GetStarted.module.css";
 import Profile from "@/customComponents/ProfileScreen";
 import GetStarted from "@/components/GetStartedComponent/GetStarted";
-
 const GetStartedPage = () => {
   const [userType, selectUserType] = useState(null);
   const [isClick, setIsClick] = useState(false);

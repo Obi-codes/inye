@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import GalleryDetailed from "@/components/GalleryDetailedComponent/GalleryDetailed";
 import { galleryItems } from "../../../utils/data";
 
@@ -17,6 +18,7 @@ const HomePageGalleryViewDetail = ({ params }) => {
         justifyContent: "center",
         flexDirection: "column",
         backgroundColor: "#141316",
+        height: "150vh"
       }}
     >
       <div style={{ width: "90%", padding: "3vw", height: "100%" }}>

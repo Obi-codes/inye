@@ -38,6 +38,7 @@ const CustomImage = ({
       blurDataURL={src}
       crossOrigin="anonymous"
       unselectable="off"
+      results={100}
     />
   );
 };

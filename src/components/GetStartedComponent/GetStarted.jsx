@@ -21,13 +21,13 @@ const fundText = (
 const boxesArray = [
   {
     id: 1,
-    type: "person",
+    type: "admin",
     image: fundImg,
     text: fundText,
   },
   {
     id: 2,
-    type: "admin",
+    type: "person",
     image: circleImg,
     text: circleText,
   },
@@ -54,6 +54,7 @@ const GetStarted = ({ setUser, userType, setIsClick }) => {
         buttonDivCss={style.buttonDiv}
         buttonCss={style.button}
         setIsClick={setIsClick}
+        buttonText={"Continue To Signup"}
       />
       <LinkComponent />
     </div>

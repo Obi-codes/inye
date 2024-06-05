@@ -1,0 +1,74 @@
+.nameDetailedDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  text-align: left;
+  background-color: #1b1c20;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.9);
+  padding: 0.5vw;
+  padding-right: 5vw;
+  border-radius: 0.2vw;
+  margin-top: 1vw;
+}
+.name {
+  color: var(--Main-Color-Text, #fff);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 17.679px */
+  margin-left: -7vw;
+  text-align: left;
+  width: 9vw;
+  /* background-color: blue; */
+}
+.date,
+.time {
+  color: var(--Sub-text-Color, rgba(255, 255, 255, 0.7));
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 17.679px */
+  text-align: left;
+  width: 5vw;
+  /* background-color: red; */
+}
+.details {
+  color: var(--Main-Color, #ffce21);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 0.9vw;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 17.679px */
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .nameDetailedDiv {
+    width: 100%;
+    margin-top: 2vw;
+    padding: 2vw;
+  }
+  .name {
+    font-size: 1.7vw;
+    line-height: 2vw;
+    letter-spacing: 0.5px;
+    /* background-color: blue; */
+  }
+  .date,
+  .time {
+    font-size: 1.7vw;
+  }
+  .details {
+    font-size: 1.7vw;
+  }
+}

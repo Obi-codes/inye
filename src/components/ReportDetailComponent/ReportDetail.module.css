@@ -1,11 +1,12 @@
 .mainDiv {
+    width: 100%;
 
+    background-color: #1b1b20;
     padding: 2vw;
-    width: 97%;
-    background-color: #1b1c20;
-    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+
     border-radius: 0.5vw;
-    /* padding-top: 0; */
 }
 
 .backButton {
@@ -22,7 +23,27 @@
     box-shadow: 0px 0px 8px rgba(255, 255, 35, 0.2);
     padding: 0.3vw;
     width: 4vw;
-    margin-right: -55%;
+    margin-left: 0%;
     margin-top: -0vw;
 
+}
+.galleryCardDiv{
+    
+    /* width: 40%; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vw;
+}
+.overViewCss{
+  margin-left: -50%;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .overViewCss{
+        margin-left: -35%;
+      
+      }
 }

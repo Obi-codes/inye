@@ -34,3 +34,20 @@
     letter-spacing: -0.05px;
     margin-top: 1vw;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .backButton {
+        margin-left: -30vw;
+        font-size: 1.5vw;
+        width: 20%;
+
+    }
+    .headText {
+     
+        font-size: 3.5vw;
+        line-height: 110%;
+        letter-spacing: 0.35px;
+        margin-top: 3vw;
+    }
+}

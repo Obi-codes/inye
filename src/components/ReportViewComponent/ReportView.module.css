@@ -1,0 +1,75 @@
+.mainDiv {
+    width: 100%;
+
+    background-color: #1b1b20;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.5vw;
+}
+
+.reportDiv {
+    width: 100%;
+    background-color: #1f2027;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* height: 35vh; */
+    border-radius: 0.5vw;
+    margin: 3vw;
+    margin-left: 0vw;
+}
+
+.tagsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    /* background-color: green; */
+    /* padding: 3vw; */
+    margin: 0.5vw;
+    margin-left: 1vw;
+    margin-top: 4vw;
+
+}
+
+.nameTags {
+    color: var(--Main-Color, #FFCE21);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "SF Pro Display";
+    font-size: 0.8vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* background-color: yellow; */
+    /* 15.469px */
+}
+.galleryCardDiv{
+    
+    /* width: 40%; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vw;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+.tagsDiv {
+    width: 60%;
+    margin: 0.5vw;
+    margin-left: 6vw;
+    margin-top: 4vw;
+
+}
+
+.nameTags {
+    font-size: 1.7vw;
+    line-height: 100%;
+}
+}

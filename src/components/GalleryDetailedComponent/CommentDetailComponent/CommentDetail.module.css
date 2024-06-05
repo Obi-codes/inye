@@ -46,3 +46,20 @@
     /* padding-bottom: 0.3vw; */
 
 }
+@media only screen and (max-width: 768px) {
+    .name {
+        font-size: 1.9vw;
+        letter-spacing: 0.356px;
+    }
+    .commentTime {
+    
+        font-size: 1.3vw;
+        letter-spacing: 0.267px;
+    }
+    .descriptionText {
+        line-height: 1.4vw;
+        font-size: 1.3vw;
+        letter-spacing: 0.696px;
+    
+    }
+}

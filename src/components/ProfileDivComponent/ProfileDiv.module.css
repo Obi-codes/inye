@@ -45,3 +45,39 @@
     padding-left: 0.2vw;
 
 }
+
+@media only screen and (max-width: 768px) {
+    .profileDiv {
+        width: 30%;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: space-evenly;
+        /* background-color: yellow; */
+    
+    }
+    .profilePic {
+        width: 7vw;
+        height: 6.5vw;
+    }
+    .profileName {
+       
+        font-size: 2.2vw;
+        /* background-color: yellow; */
+      
+        width: 29vw;
+        /* 19.88px */
+        letter-spacing: 0.196px;
+      
+    
+    }
+    .profileDate {
+       
+        line-height: 100%;
+        font-size: 1.4vw;
+        letter-spacing: 0.196px;
+       
+    
+    }
+}

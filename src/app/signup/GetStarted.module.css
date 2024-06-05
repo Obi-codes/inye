@@ -1,46 +1,64 @@
 .main {
-    background-color: transparent;
-    /* width: 60vw; */
-    /* height: 80vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* padding: 3vw; */
-    /* margin: 10vw auto; */
-    /* border-radius: 2vw; */
+  background-color: transparent;
+  /* background-color: blue; */
+  /* width: 60vw; */
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3vw; */
+  /* margin: 10vw auto; */
+  /* border-radius: 2vw; */
 }
 .subMain {
-    background-color: transparent;
-    width: 60vw;
-    /* height: 80vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3vw;
-    /* margin: 10vw auto; */
-    /* border-radius: 2vw; */
+  background-color: transparent;
+  width: 60vw;
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  /* margin: 10vw auto; */
+  /* border-radius: 2vw; */
 }
 
 .inye {
-
-    color: var(--Main-Color-Text, #FFF);
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-size: 2vw;
-    letter-spacing: -0.695px;
-    font-family: 'Barlow Condensed';
-    font-weight: 700;
+  color: var(--Main-Color-Text, #fff);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 2vw;
+  letter-spacing: -0.695px;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
 }
 
 .tagLine {
-    color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
+  color: var(--Sub-text-Color, rgba(255, 255, 255, 0.7));
 
-    /* font-feature-settings: 'clig' off, 'liga' off; */
-    font-family: 'SF Pro Display';
-    font-size: 1.5vw;
-    /* font-style: normal; */
-    /* font-weight: normal; */
-    line-height: normal;
-    letter-spacing: -0.72px;
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  font-family: "SF Pro Display";
+  font-size: 1.5vw;
+  /* font-style: normal; */
+  /* font-weight: normal; */
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background-color: transparent;
+    /* background-color: blue; */
+    margin-top: 50%;
+  }
+
+  .inye {
+    font-size: 4vw;
+    letter-spacing: 0.695px;
+  }
+
+  .tagLine {
+    font-size: 2.5vw;
+    letter-spacing: 0.72px;
+  }
 }

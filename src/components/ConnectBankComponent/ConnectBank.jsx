@@ -4,14 +4,14 @@ import BackBtnHeading from "../BackBtnandHeadingComponent/BackBtnHeading";
 import Image from "next/image";
 import plaidimage from "../../../public/assets/plaidimage.png";
 
-const ConnectBank = ({ setShowPlaid, setIsSure }) => {
+const ConnectBank = ({ setActiveStep }) => {
   const plaidDiv = (
     <Image
       src={plaidimage}
-      alt="calender"
+      alt="plaid"
       width={100}
       height={100}
-      unoptimized={false}
+      unoptimized={true}
       style={{
         borderRadius: "50%",
         marginBottom: "0.2vw",
@@ -24,18 +24,15 @@ const ConnectBank = ({ setShowPlaid, setIsSure }) => {
       <BackBtnHeading
         headText={"Connect your BANK with Plaid"}
         plaidDiv={plaidDiv}
-        setOpen={setShowPlaid}
+        setActiveStep={setActiveStep}
       />
-      <div className={style.buttonDiv}>
-        <button
-          className={style.button}
-          onClick={() => {
-            setIsSure(true);
-            setShowPlaid(false);
-          }}
-        >
-          Continue
-        </button>
+      <div
+        className={style.buttonDiv}
+        onClick={() => {
+          setActiveStep((prev) => prev + 1);
+        }}
+      >
+        <button className={style.button}>Continue</button>
       </div>
     </div>
   );

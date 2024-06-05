@@ -6,16 +6,42 @@
     font-weight: 500;
     line-height: normal;
 }
-.linkText{
+
+.linkText {
     color: var(--Main-Color, #FFCE21);
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: "SF Pro Display";
-font-size: 1vw;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin-left: -0.1vw;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "SF Pro Display";
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 0.3vw;
+    text-decoration: underline;
 }
-.linkDiv{
+
+.linkDiv {
     padding: 2vw;
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
 }
+
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .spanText,
+    .linkText {
+      font-size: 1vw; /* Adjust font size for this range */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .spanText,
+    .linkText {
+      font-size: 2vw; /* Adjust font size for screens below 768px */
+    }
+  
+    .linkDiv {
+      padding: 2vw; /* Adjust padding for screens below 768px */
+    }
+  }
+  

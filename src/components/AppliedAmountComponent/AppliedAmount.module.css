@@ -1,0 +1,90 @@
+.mainDiv {
+  width: 100%;
+  /* background-color: #141316; */
+  background-color: "#1F2027";
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 35vh;
+  border-radius: 0.5vw;
+  padding-bottom: 18%;
+}
+
+.amount {
+  color: var(--Main-Color-Text, #ffce21);
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.05px;
+  margin-top: 1vw;
+  margin-left: 0.4vw;
+  margin-right: 0.4vw;
+  text-decoration: underline;
+}
+
+.description {
+  color: var(--Sub-text-Color, rgba(255, 255, 255, 0.7));
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "SF Pro Display";
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  width: 70%;
+  margin-top: 1.3vw;
+}
+
+.buttonDiv {
+  background-color: #ffce21;
+  padding: 0.4vw;
+  width: 60%;
+  border-radius: 1.2vw;
+  text-align: center;
+  margin-top: 2.2vw;
+  cursor: pointer;
+}
+
+.button {
+  color: var(--Inner-Black-Shade, #1f2027);
+  font-family: "SF Pro Display";
+  font-size: 1.2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainDiv {
+    height: 18vh;
+  }
+
+  .amount {
+    font-size: 3.5vw;
+  }
+
+  .description {
+    font-size: 2vw;
+    letter-spacing: 0.5px;
+  }
+
+  .buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 3.2vw;
+
+  }
+
+  .button {
+    font-size: 3.2vw;
+  }
+
+}

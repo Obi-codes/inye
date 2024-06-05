@@ -1,0 +1,26 @@
+.mainDiv{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    padding: 2vw;
+    width: 100%;
+    background-color: #1b1c20;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+    border-radius: 0.5vw;
+    /* height: 100vh; */
+    padding-top: 0;
+
+
+}
+
+
+.galleryCardDiv{
+    
+    /* width: 40%; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vw;
+}

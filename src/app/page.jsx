@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import profile1 from "../../public/assets/profile1.png";
+import { useEffect } from "react";
 const GalleryView = dynamic(
   () => import("@/components/GalleryViewComponent/GalleryView"),
   { ssr: false }
@@ -9,16 +10,14 @@ const GalleryDetailed = dynamic(
   () => import("@/components/GalleryDetailedComponent/GalleryDetailed"),
   { ssr: false }
 );
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
+  const router = useRouter();
+
   const authUser =
     typeof localStorage !== "undefined" &&
     JSON.parse(localStorage?.getItem("inyeUserData"));
-
-  const item = {
-    quantity: 3,
-    amount: 14,
-  };
 
   const data = {
     id: 1,
@@ -29,6 +28,12 @@ const HomePage = () => {
     amount: "$300",
   };
 
+  useEffect(() => {
+    if (!authUser) {
+      router?.push("/signup");
+    }
+  }, [authUser]);
+
   return (
     <div
       style={{
@@ -37,7 +42,7 @@ const HomePage = () => {
         justifyContent: "center",
         flexDirection: "column",
         backgroundColor: "#141316",
-        height: "100%",
+        height: "150vh%",
         flex: 1,
       }}
     >
@@ -45,7 +50,7 @@ const HomePage = () => {
         {authUser?.type === "admin" ? (
           <GalleryDetailed authUser={authUser} item={data} />
         ) : (
-          <GalleryView />
+          < GalleryView />
         )}
       </div>
     </div>

@@ -9,6 +9,7 @@
   justify-content: space-around;
   height: 35vh;
   border-radius: 0.5vw;
+  /* background-color: yellow; */
 }
 .amount {
   color: var(--Main-Color-Text, #ffce21);
@@ -22,4 +23,16 @@
   margin-top: 1vw;
   margin-left: 0.2vw;
   text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mainDiv {
+   
+    height: 18vh;
+ 
+  }
+  .amount {
+    font-size: 2.5vw;
+   }
 }

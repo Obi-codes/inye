@@ -44,3 +44,33 @@
     top: -0.8vw;
     right: -0.4vw;
 }
+
+@media only screen and (max-width: 768px) {
+    .box {
+        background-color: #2e2d2a;
+        
+        width: 43%;
+        height: 90%;
+        border-radius: 2vw;
+    
+    }
+    .imgCss {
+        width: 12vw;
+        height: 12vw;
+    }
+    
+    .text {
+      
+        font-size: 2.5vw;
+      
+        width: 15vw;
+        padding: 0.5vw;
+        line-height: normal;
+        letter-spacing: 0.22px;
+    }
+    .checkBox{
+       
+        top: -1.8vw;
+        right: -0.9vw;
+    }
+}

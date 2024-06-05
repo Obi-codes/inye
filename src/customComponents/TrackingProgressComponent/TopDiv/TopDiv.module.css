@@ -1,0 +1,40 @@
+.picBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+
+}
+
+.timeBtnDiv{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* background-color: yellow; */
+    margin-top: 2vw;
+    height: 7vw;
+    flex-direction: column;
+}
+
+.time {
+    color: #EC583C;
+    font-family: "SF Pro Display";
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 28.235px */
+    letter-spacing: -0.847px;
+}
+
+@media only screen and (max-width: 768px) {
+    .time {
+        font-size: 3vw;
+        margin-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    .picBtnDiv {
+        margin-bottom: 5vw;
+    
+    }
+}

@@ -1,0 +1,51 @@
+.mainDiv {
+  width: 100%;
+  background-color: #141316;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35vh;
+  border-radius: 0.5vw;
+}
+.amount {
+  color: var(--Main-Color-Text, #ffce21);
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.05px;
+  margin-top: 1vw;
+  text-decoration: underline;
+  margin-left: 0.3vw;
+}
+.cancelButton {
+  border-radius: 50%;
+  margin-top: -0.5vw;
+  margin-left: 33vw;
+  margin-bottom: 2vw;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .mainDiv {
+   
+    height: 16vh;
+    padding: 2vw;
+ 
+  }
+  .amount {
+    font-size: 3.5vw;
+    margin-left: 1vw;
+   }
+   .cancelButton {
+    border-radius: 50%;
+    margin-top: 0.5vw;
+    margin-left: 63vw;
+    margin-bottom: 1vw;
+    /* background-color: green; */
+  }
+}

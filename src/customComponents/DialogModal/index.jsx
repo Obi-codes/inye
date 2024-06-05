@@ -17,7 +17,7 @@ const DialogModal = ({
     <Dialog
       sx={{
         "& .MuiDialog-paper": {
-          width: "100%",
+          width: {xs: '80%', sm: '80%', md: '100%'},
           borderRadius: "0.5vw",
           p: 0,
           m: 0,

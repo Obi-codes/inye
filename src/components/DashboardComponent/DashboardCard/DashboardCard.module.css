@@ -10,6 +10,7 @@
 
 
 }
+
 .detailTop {
     display: flex;
     /* flex-direction: column; */
@@ -22,8 +23,9 @@
 .detailSubDiv {
     display: flex;
     /* flex-direction: column; */
-    align-items: center;
-    /* justify-content: space-between; */
+    /* align-items: center; */
+    justify-content: space-between;
+    /* width: 150%; */
 }
 
 .subDiv {
@@ -115,14 +117,17 @@
     /* border-radius: 1vw; */
     margin-top: 2vw;
     padding: 0.4vw;
+    cursor: pointer;
 
     /* margin-left: 4.8%; */
 }
-.buttonDiv:hover{
+
+.buttonDiv:hover {
     background-color: #ffce21;
     color: var(--Sub-text-Color, rgba(255, 255, 255, 0.70));
 
 }
+
 .button {
     /* color: #ffce21; */
     font-family: "SF Pro Display";
@@ -137,6 +142,7 @@
 
 
 }
+
 .cancelSubscriptionDiv {
     background-color: #ec583c;
     padding: 0.4vw;
@@ -154,5 +160,81 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .mainDiv {
+        padding: 1vw;
+        width: 90%;
+    }
+
+    .detailTop {
+        margin-top: 3vw;
+    }
+
+    .detailSubDiv {
+        margin-top: 3vw;
+        /* width: 100vw; */
+    }
+
+    .subDiv1 {
+        font-size: 1.5vw;
+        margin-right: 2vw;
+        width: 150%;
+        letter-spacing: 0.109px;
+    }
+
+    .subDiv2 {
+        font-size: 1.5vw;
+        margin-top: 0.7vw;
+
+    }
+
+    .descriptionDiv {
+        margin-top: 2vw;
+    }
+
+    .descriptionTag {
+        font-size: 2.2vw;
+        letter-spacing: -0.196px;
+    }
+
+    .descriptionText {
+        font-size: 1.5vw;
+        letter-spacing: 0.596px;
+        line-height: 1.9vw;
+
+    }
+
+    .buttonDiv {
+
+        width: 30%;
+        border-radius: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vw;
+    }
+
+    .button {
+        font-size: 1.7vw;
+        padding: 0.6vw;
+    }
+
+    .cancelSubscriptionDiv {
+        border-radius: 2.8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vw;
+
+    }
+
+    .cancelButton {
+        font-size: 3.2vw;
+        padding: 1vw;
+    }
 
 }

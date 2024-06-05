@@ -38,7 +38,7 @@ const CreateProject = ({
         <span className={style.tagLine}>(Invest, Nurture, Yield Equity)</span>
         <CustomCard
           sxStyle={{
-            minWidth: "900px",
+            minWidth: { xs: 360, sm: 450, md: 900 },
             fontFamily: "SF Pro Display",
           }}
           title={
@@ -46,8 +46,8 @@ const CreateProject = ({
               onClick={() => handleBack()}
               sx={{
                 fontFamily: '"SF Pro Display", sans-serif',
-                fontSize: "18px",
-                height: "32px",
+                fontSize: { xs: 8, sm: 10, md: 32 },
+                height: { xs: 18, sm: 20, md: 30 },
                 fontWeight: 500,
                 color: "white",
                 borderRadius: "12px",
@@ -70,7 +70,7 @@ const CreateProject = ({
             <Typography
               sx={{
                 color: "white",
-                fontSize: "40px",
+                fontSize: { xs: 18, sm: 20, md: 40 },
                 fontWeight: 800,
                 letterSpacing: "-1.2px",
               }}
@@ -80,7 +80,7 @@ const CreateProject = ({
             <Typography
               sx={{
                 fontFamily: '"SF Pro Display", sans-serif',
-                fontSize: 24,
+                fontSize: { xs: 12, sm: 16, md: 24 },
                 fontWeight: 400,
                 letterSpacing: "-0.72px",
                 opacity: 0.7,
@@ -93,9 +93,9 @@ const CreateProject = ({
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: 2,
-                width: "600px",
-                mt: "1vw",
+                gap: { xs: 2.5, sm: 2.25, md: 2 },
+                width: { xs: 260, sm: 360, md: 600 },
+                mt: { xs: "2.5vw", sm: "2vw", md: "1vw" },
               }}
             >
               <TextField
@@ -103,8 +103,6 @@ const CreateProject = ({
                 fullWidth
                 placeholder={"Project Name"}
                 name="name"
-                // value={formData.name}
-                // onChange={handleInputChange}
                 sx={{
                   width: 1,
                   color: "white",
@@ -126,8 +124,6 @@ const CreateProject = ({
                 fullWidth
                 placeholder={"organization Title"}
                 name="orgTitle"
-                // value={formData.orgTitle}
-                // onChange={handleInputChange}
                 sx={{
                   width: 1,
                   color: "white",
@@ -149,7 +145,6 @@ const CreateProject = ({
                 fullWidth
                 placeholder={"Display Picture"}
                 name="picture"
-                // value={formData.picture}
                 sx={{
                   width: 1,
                   color: "white",
@@ -164,16 +159,20 @@ const CreateProject = ({
                     border: "1px solid",
                     borderColor: "white",
                   },
+                  "& .MuiInputAdornment-root": {
+                    color: colorSchema.main,
+                  },
                 }}
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment
-                      position="end"
-                      sx={{
-                        color: colorSchema.main,
-                      }}
-                    >
-                      Upload
+                    <InputAdornment position="end">
+                      <span
+                        style={{
+                          color: colorSchema.main,
+                        }}
+                      >
+                        Upload
+                      </span>
                     </InputAdornment>
                   ),
                 }}
@@ -183,7 +182,6 @@ const CreateProject = ({
                 fullWidth
                 placeholder={"Project Description"}
                 name="desc"
-                // value={formData.desc}
                 multiline={true}
                 rows={4}
                 sx={{
@@ -210,9 +208,9 @@ const CreateProject = ({
                     backgroundColor: colorSchema.main,
                     color: "black",
                     fontWeight: 700,
-                    fontSize: "18px",
+                    fontSize: { xs: 10, sm: 12, md: 18 },
                     borderRadius: "25px",
-                    minWidth: 200,
+                    minWidth: { xs: 100, sm: 120, md: 200 },
                     p: 1,
                   }}
                 >

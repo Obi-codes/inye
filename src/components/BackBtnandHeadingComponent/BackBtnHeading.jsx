@@ -1,11 +1,27 @@
-import React from 'react'
-import style from './BackBtnHeading.module.css'
+import React from "react";
+import style from "./BackBtnHeading.module.css";
 
-const BackBtnHeading = ({ headText, plaidDiv, hideBtn, setOpen }) => {
+const BackBtnHeading = ({
+  headText,
+  plaidDiv,
+  hideBtn,
+  setOpen,
+  activeStep,
+  setActiveStep,
+}) => {
+  
+  const handleBack = () => {
+    if (activeStep === 0) {
+      setOpen && setOpen(false);
+    } else {
+      setActiveStep((prev) => prev - 1);
+    }
+  };
+
   return (
     <div className={style.mainDiv}>
       {!hideBtn && (
-        <button className={style.backButton} onClick={() => setOpen(false)}>
+        <button className={style.backButton} onClick={handleBack}>
           {"< Back "}
         </button>
       )}
@@ -15,4 +31,4 @@ const BackBtnHeading = ({ headText, plaidDiv, hideBtn, setOpen }) => {
   );
 };
 
-export default BackBtnHeading
+export default BackBtnHeading;

@@ -3,7 +3,7 @@ import style from "./AmountConformation.module.css";
 import BackBtnHeading from "../BackBtnandHeadingComponent/BackBtnHeading";
 import ButtonPair from "../OutlineButtonPairComponent/ButtonPair";
 
-const AmountConformation = ({ setIsSure, setShowApplied }) => {
+const AmountConformation = ({ setIsSure, setShowApplied, setActiveStep }) => {
   const headText = (
     <>
       Are you sure you want to be billed <br />
@@ -12,13 +12,18 @@ const AmountConformation = ({ setIsSure, setShowApplied }) => {
   );
   return (
     <div className={style.mainDiv}>
-      <BackBtnHeading headText={headText} hideBtn={true} />
+      <BackBtnHeading
+        headText={headText}
+        hideBtn={true}
+        setActiveStep={setActiveStep}
+      />
       <ButtonPair
         leftBtn={"No"}
         rightBtn={"Yes"}
         width
         setIsSure={setIsSure}
         setShowPlaid={setShowApplied}
+        setActiveStep={setActiveStep}
       />
     </div>
   );

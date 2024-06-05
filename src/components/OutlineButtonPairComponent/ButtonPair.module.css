@@ -1,0 +1,83 @@
+.buttonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+}
+
+.button {
+    border: 1px solid #ffce21;
+    border-radius: 2vw;
+    background-color: #262527;
+    color: #ffce21;
+    padding: 0.5vw;
+    font-size: 1vw;
+    font-family: "SF Pro Display";
+    width: 15vw;
+
+}
+
+.button:hover {
+    color: var(--Inner-Black-Shade, #1F2027);
+    text-align: center;
+    background-color: #ffce21;
+}
+.redButtonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+}
+
+.redButton {
+    border: 1px solid #ec583c;
+    border-radius: 2vw;
+    background-color: #262527;
+    color: #ec583c;
+    padding: 0.7vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    font-size: 1vw;
+    font-family: "SF Pro Display";
+    /* width: 12vw; */
+    
+
+}
+
+.redButton:hover {
+    color: var(--Inner-Black-Shade, #1F2027);
+    text-align: center;
+    background-color: #ec583c;
+    color: var(--Main-Color-Text, #FFF);
+
+}
+
+@media only screen and (max-width: 768px) {
+    .buttonDiv {
+        padding: 1vw;
+    }
+    
+    .button {
+        border-radius: 2.5vw;
+        padding: 01vw;
+        font-size: 2vw;
+        width: 30vw;
+    
+    }
+    .redButtonDiv {
+        padding: 1vw;
+    }
+    
+    .redButton {
+        border-radius: 2.5vw;
+        /* padding: 01vw; */
+        font-size: 1.7vw;
+        /* width: 30vw; */
+    
+    }
+}
